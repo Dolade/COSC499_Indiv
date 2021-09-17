@@ -4,32 +4,32 @@ import java.util.*;
 public class Array_Sort {
 
 	public static void main(String[] args) {
-		int[] nums = new int[20];
-		int[] sortNums = new int[20];
-		int upBound = 101;
-		Random rand = new Random();
-		int temp = 101;
+		Scanner in = new Scanner(System.in);
+		String[] str = new String[5];
+		String[] sortStr = new String[5];
+		int tempLength = 100;
+		String temp = null;
 		int idx = 0;
+		String longString = "This is a veyr long string that should never be passed!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 		
-		for(int i = 0; i < 20; i++) {
-			nums[i] = rand.nextInt(upBound);
-			System.out.print(nums[i] + ", ");
+		System.out.println("Please write 5 separate words that you'd like to have sorted by amount of characters/string length: (Press enter to submit each word)");
+		for(int i = 0; i < 5; i++) {
+			str[i] = in.nextLine();
 		}
 		
-		System.out.println();
-		
-		for(int i = 0; i < 20; i++) {
-			for(int j = 0; j < 20; j++) {
-				if(nums[j] < temp) {
-					temp = nums[j];
+		for(int i = 0; i < 5; i++) {
+			for(int j = 0; j < 5; j++) {
+				if(str[j].length() < tempLength) {
+					temp = str[j];
+					tempLength = str[j].length();
 					idx = j;
 				}
 			}
 			
-			sortNums[i] = temp;
-			nums[idx] = 101;
-			System.out.println(sortNums[i]);
-			temp = 101;
+			sortStr[i] = temp;
+			str[idx] = longString;
+			System.out.println(sortStr[i]);
+			tempLength = 100;
 		}
 		
 	}
