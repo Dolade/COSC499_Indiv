@@ -6,7 +6,9 @@ Two array sorting features have been implemented using Java code.
 - String array sorting (ascending order in relevance to string length/amount of characters)
 
 
+
 Both version have been split into their own respective branches.
+
 
 
 Integer version:
