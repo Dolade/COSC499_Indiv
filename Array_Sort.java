@@ -26,7 +26,7 @@ public class Array_Sort {
 				}
 			}
 			
-			sortStr[i] = temp;
+			sortStr[i] = temp; //comment
 			str[idx] = longString;
 			System.out.println(sortStr[i]);
 			tempLength = 100;
